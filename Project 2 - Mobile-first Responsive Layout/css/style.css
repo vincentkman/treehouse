@@ -36,6 +36,7 @@ a:hover {
 h2 {
   font-size: 1em;
   font-weight: 700;
+  color: #283370;
 }
 
 h3 {
@@ -62,6 +63,12 @@ h3 {
 .top-nav a {
   font-size: 1.2em;
   font-weight: 700;
+  background-color:#669966;
+  border: 2px solid #000;
+}
+
+.top-nav a:hover {
+  background-color: #006699;
 }
 
 .top-nav ul {
@@ -120,10 +127,15 @@ h3 {
 }
 
 .portfolio-row {
-  padding-bottom: 60px;
+  padding-bottom: 5px;
 }
 
 /* Section Styles: Skills */
+
+#skills {
+  background-color: white;
+  padding: 50px 0 100px 0;
+}
 
 #skills h2 {
   padding-top: 60px;
@@ -183,13 +195,14 @@ footer h2 {
   float: left;
   font-size: .9em;
   margin: 20px 0 30px 0;
+  padding-left: 20px;
 }
 
 .back-to-top {
   float: right;
   font-size: .8em;
   font-weight: 700;
-  padding-top: 20px;
+  padding: 20px 20px 0 0;
 }
 
 .bottom-nav {
@@ -305,6 +318,6 @@ footer h2 {
   }
 
   .bottom-nav {
-    padding-top: 20px;
+    padding-top: 15px;
   }
 }
