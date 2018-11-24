@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>An Online Registration Form</title>
+    <meta name="stylesheet" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+  </head>
+  <body>
+    <header>
+      <h1 class="main-title">THE CODE REVIEW</h1>
+    </header>
+    <div class="intro container">
+    <h2>Signup for our newsletter</h2>
+    <p>Get the latest news on how your code is doing right in your inbox</p>
+    </div>
+    <main>
+      <div class="container">
+
+      <form action="index.html" method="post">
+
+        <hr class="border1">
+        <hr class="border2">
+
+        <fieldset>
+          <legend>Contact Information</legend>
+          <div class="col">
+        <div>
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Required" required>
+      </div>
+      <div>
+        <label for="mail">Email Address</label>
+        <input type="email" id="mail" name="user_email" placeholder="Required" required>
+      </div>
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="telephone" placeholder="e.g 0203 456 7891">
+      </div>
+      <div>
+        <label for="address">Street Address</label>
+        <input type="text" id="address" name="street_address" placeholder="e.g 123 Coding Street">
+      </div>
+      <div>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="e.g London">
+      </div>
+      <div>
+        <label for="states">State</label>
+        <select id="states" name="state">
+          <option value="">Choose State</option>
+          <option value="England">England</option>
+          <option value="Scotland">Scotland</option>
+          <option value="Wales">Wales</option>
+          <option value="Northern Ireland">Northern Ireland</option>
+        </select>
+      </div>
+      <div class='zip'>
+        <label for="zipcode">Zip Code</label>
+        <input type="text" id="zipcode" name="zipcode" placeholder="e.g AB1 2CD">
+      </div>
+      </div>
+    </fieldset>
+    <hr class="border3">
+
+      <fieldset>
+        <legend>Newsletter</legend>
+        <div class="col">
+        <p class="newsletter-sub">Select the newsletter you would like to receive</p>
+        <div>
+          <input type="checkbox" id="html-news" value="html-news1" name="html-news2"/>
+          <label class="inline" for="html-news">HTML News</label>
+        </div>
+        <div>
+          <input type="checkbox" id="css-news" value="css-news1" name="css-news2" />
+          <label class="inline" for="css-news">CSS News</label>
+        </div>
+        <div>
+          <input type="checkbox" id="javascript-news" value="javascript-news1" name="javascript-news2" />
+          <label class="inline" for="javascript-news">Javascript News</label>
+        </div>
+      </div>
+      </fieldset>
+
+    <fieldset>
+      <div class="col">
+      <p>Newsletter format</p>
+      <div>
+        <div>
+          <input type="radio" id="html" value="html" name="newsletter_format">
+          <label class="inline" for="html">HTML</label>
+        </div>
+        <div>
+          <input type="radio" id="plaintext" value="plaintext" name="newsletter_format">
+          <label class="inline" for="plaintext">Plain text</label>
+        </div>
+        <div>
+          <label class="other" for="msg">Other topics you'd like to hear about</label>
+          <textarea id="msg" name="user_message" rows="8" placeholder="Your message goes here"></textarea>
+        </div>
+        <button type="submit" class="default">Sign Up</button>
+      </div>
+      </div>
+
+    </fieldset>
+
+
+
+  </form>
+  </div>
+</main>
+
+  <footer><em>Copyright The Code Review</em></footer>
+  </body>
+</html>

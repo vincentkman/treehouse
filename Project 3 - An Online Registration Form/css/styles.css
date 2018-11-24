@@ -1,0 +1,260 @@
+/* Global Layout Set-up */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+}
+
+/* Section Styles */
+
+.container {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.col {
+  margin-left: 20px;
+}
+
+div:first-child {
+  margin-top: 10px;
+}
+
+/* Section Styles - Header */
+
+header {
+  background: linear-gradient(#20B2AA, transparent 80%),
+              linear-gradient(90deg, #32CD32, transparent);
+  padding-top: 100px;
+}
+
+.main-title {
+  font-weight: 600;
+  color: #fff;
+  display: table;
+  margin: -70px auto;
+  text-align: center;
+}
+
+/* Section Styles - Intro */
+
+.intro {
+  text-align: center;
+  margin-top: 7em;
+}
+
+.intro h2 {
+  color: #29303d;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.intro p {
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: 0 40px 30px 40px;
+  color: #9e9e9e;
+}
+
+/* Section Styles - Form */
+
+form {
+  margin: 0 auto;
+  padding: 1em;
+  font-size:.8em;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+form div + div {
+  margin-top: 1.3em;
+}
+
+/* Section Styles - Border */
+
+.border1 {
+  border-top: 6px solid black;
+}
+
+.border2 {
+  border-top: 3px solid black;
+  margin: 5px 0 10px 0;
+}
+
+.border3 {
+  border-top: 3px solid black;
+  margin: 50px 0 40px 0;
+}
+
+/* Section Styles - Fieldset */
+
+form > fieldset {
+  border: 0;
+  box-shadow: none;
+}
+
+
+/* Section Styles - Legend */
+
+legend {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 50px 0 30px 0;
+}
+
+.newsletter-sub {
+  margin-top: -10px;
+}
+
+/* Section Styles - label, p */
+
+label,
+p {
+  font-size: 1.3em;
+}
+
+label:last-of-type {
+ margin-top: .3em;
+}
+
+/* Section Styles - input, textarea, select */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea[id="msg"],
+select[id="states"] {
+  display: flex;
+  height: 3.5em;
+  width: 100%;
+  background-color: #e8eaed;
+  border-radius: 8px 8px;
+  border: none;
+  font-size: 16px;
+  padding: 15px;
+  margin: 15px 0px 20px 0;
+}
+
+input[id="zipcode"] {
+  width: 50%;
+  margin-top: 15px;
+}
+
+::placeholder {
+  text-align: right;
+  font-weight: lighter;
+  font-style: italic;
+  padding-right: 15px;
+}
+
+textarea[id="msg"] {
+  height: 8em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[id="zipcode"]:focus,
+textarea[id="msg"]:focus,
+select[id="states"]:focus {
+  outline: none;
+  border: 2px solid;
+  background-color: #FFF8DC;
+  transition: all .6s;
+  border-color: #20B2AA;
+}
+
+input:not([type="submit"]) {
+  padding: 10px;
+}
+
+/* Section Styles - checkbox, radio */
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0 4px 8px 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  font-weight: bold;
+  color: #20B2AA;
+}
+
+/* Section Styles - button */
+
+button {
+  background-color: #51B7B2;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.default {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 400;
+  width: 100%;
+  height: 3em;
+  margin-top: 35px;
+}
+
+button:focus {
+  opacity: 1;
+}
+
+button:hover {
+  opacity: .8;
+  transition: .5s;
+}
+
+/* Section Styles - footer */
+
+footer {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 0 40px;
+  color: #9e9e9e;
+  margin: 30px 0 300px 0;
+}
+
+/* Styles for larger screens */
+@media screen and (min-width: 768px) {
+
+  .container {
+    max-width: 60%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select[id="states"] {
+    display: inline-block;
+    width: 80%;
+    margin: 10px 10px 10px 10px;
+  }
+
+  input[id="zipcode"] {
+    width: 40%;
+    margin-top: 15px;
+  }
+
+  label {
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+  }
+
+  .other {
+    width: 100%;
+  }
+}
