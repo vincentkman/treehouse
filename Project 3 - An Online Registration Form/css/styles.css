@@ -100,7 +100,6 @@ form > fieldset {
   box-shadow: none;
 }
 
-
 /* Section Styles - Legend */
 
 legend {
@@ -239,12 +238,12 @@ footer {
   input[type="tel"],
   select[id="states"] {
     display: inline-block;
-    width: 80%;
+    width: 70%;
     margin: 10px 10px 10px 10px;
   }
 
   input[id="zipcode"] {
-    width: 40%;
+    width: 35%;
     margin-top: 15px;
   }
 
