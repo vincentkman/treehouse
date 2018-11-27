@@ -23,6 +23,11 @@ body {
   margin-left: 20px;
 }
 
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+
 div:first-child {
   margin-top: 10px;
 }
@@ -77,6 +82,10 @@ form div + div {
   margin-top: 1.3em;
 }
 
+form label {
+  margin-top: 1.6em;
+}
+
 /* Section Styles - Border */
 
 .border1 {
@@ -120,7 +129,7 @@ p {
 }
 
 label:last-of-type {
- margin-top: .3em;
+ margin-bottom: .3em;
 }
 
 /* Section Styles - input, textarea, select */
@@ -130,7 +139,6 @@ input[type="email"],
 input[type="tel"],
 textarea[id="msg"],
 select[id="states"] {
-  display: flex;
   height: 3.5em;
   width: 100%;
   background-color: #e8eaed;
@@ -233,18 +241,22 @@ footer {
     max-width: 60%;
   }
 
+  .form-item {
+  flex-direction: row;
+  margin-top: 2px;
+}
+
   input[type="text"],
   input[type="email"],
   input[type="tel"],
   select[id="states"] {
     display: inline-block;
     width: 70%;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px;
   }
 
   input[id="zipcode"] {
     width: 35%;
-    margin-top: 15px;
   }
 
   label {
