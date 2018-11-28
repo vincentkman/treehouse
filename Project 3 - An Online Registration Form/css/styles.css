@@ -23,13 +23,12 @@ body {
   margin-left: 20px;
 }
 
-.form-item {
-  display: flex;
-  flex-direction: column;
-}
-
 div:first-child {
   margin-top: 10px;
+}
+
+.newsletter-sub {
+  margin-top: -10px;
 }
 
 /* Section Styles - Header */
@@ -86,6 +85,10 @@ form label {
   margin-top: 1.6em;
 }
 
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
 /* Section Styles - Border */
 
 .border1 {
@@ -115,10 +118,6 @@ legend {
   font-size: 1.8em;
   font-weight: bold;
   margin: 50px 0 30px 0;
-}
-
-.newsletter-sub {
-  margin-top: -10px;
 }
 
 /* Section Styles - label, p */
@@ -250,7 +249,6 @@ footer {
   input[type="email"],
   input[type="tel"],
   select[id="states"] {
-    display: inline-block;
     width: 70%;
     margin: 10px 10px;
   }
@@ -260,7 +258,6 @@ footer {
   }
 
   label {
-    display: inline-block;
     width: 140px;
     text-align: left;
   }
