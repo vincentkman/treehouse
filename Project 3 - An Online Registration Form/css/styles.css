@@ -81,10 +81,6 @@ form div + div {
   margin-top: 1.3em;
 }
 
-form label {
-  margin-top: 1.6em;
-}
-
 .form-item {
   display: flex;
   flex-direction: column;
@@ -260,6 +256,10 @@ footer {
   label {
     width: 140px;
     text-align: left;
+  }
+
+  form label {
+    margin-top: 1.6em;
   }
 
   .other {
