@@ -1,0 +1,19 @@
+.form {
+    @include flexbox($dir: column);
+    > button {
+        margin: em(5px) em(-10px) 0 em(5px) ;
+    }
+    @include e(input) {
+      @extend %bottom-border-style;
+        margin: 0 0 em(15px) em(15px);
+        padding-top: em(10px);
+      &:focus {
+        @extend %input-box-style;
+      }
+    }
+    @include e(label) {
+      @include m(hidden) {
+        @extend %srt;
+    }
+  }
+}

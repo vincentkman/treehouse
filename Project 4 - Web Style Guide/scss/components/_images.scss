@@ -1,0 +1,19 @@
+.img {
+  @include m(logo) {
+    @extend %img;
+    padding-bottom: em(25px);
+  }
+  @include m(avatar) {
+    @extend %img;
+    width: em(200px);
+  }
+  @include m(frame) {
+    @extend %img;
+    width: 100%;
+    @extend %border-frame;
+    @include mq('medium') {
+      margin-left: em(50px);
+      width: 80%;
+    }
+  }
+}

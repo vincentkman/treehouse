@@ -1,0 +1,9 @@
+.btn {
+  @include color-modifiers($ui-colors);
+}
+
+[class^="btn--"] {
+  @extend %btn;
+  @extend %border-style;
+  margin-bottom: em(20px);
+}

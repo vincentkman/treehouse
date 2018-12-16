@@ -1,0 +1,114 @@
+// No underline 
+
+%no-txt-undln {
+  text-decoration: none;
+}
+
+// Screen reader text
+
+%srt {
+  text-indent: -9999px;
+}
+
+//Headlines
+
+%hdln-prim {
+  font-size: em(25px);
+  margin-bottom: em(30px, 25px);
+  padding-left: em(10px);
+  letter-spacing: $letter-space;
+  color: $emerald;
+}
+
+%hdln-sec {
+  font-weight: $font-weight--medium;
+  font-size: em(15px);
+  color: palette(grey, light);
+  padding-left: em(10px);
+}
+
+// Border
+
+%border-style {
+  border-radius: $br--default;
+  border: none;
+  color: palette(grey, x-dark);
+  padding: em(15px) em(15px);
+}
+
+%bottom-border-style {
+  border: 0;
+  box-shadow: none;
+  border-bottom: 8px solid $emerald;
+  width: 90%;
+  padding: 0 0 em(13px) em(16px);
+}
+
+%left-border-style {
+  border-left: 8px solid $emerald;
+  border-top-left-radius: $br--default;
+  border-bottom-left-radius: $br--default;
+  border-color: $emerald;
+  width: 70%;
+  padding-left: em(13px);
+  margin: em(20px) 0 em(50px) em(16px);
+}
+
+%border-frame {
+  border: 2px groove palette(grey, xx-light);
+  padding: em(12px);
+}
+
+// Transition
+
+%trn {
+  opacity: .8;
+  transition: $trns-duration;
+}
+
+// Button
+
+%btn {
+  color: $white;
+  text-transform: uppercase;
+  font-size: em(13px);
+  font-weight: $font-weight--medium;
+  cursor: pointer;
+  &:hover {
+    @extend %trn;
+  }
+  &:active {
+    opacity: .8;
+  }
+}
+
+// Form Input Box
+
+%input-box-style {
+  outline: none;
+  background-color: $light-yellow;
+  transition: all $trns-duration;
+  border-color: $sea-green;
+}
+
+// Link
+
+%link {
+  color: $sky-blue;
+  font-weight: $font-weight--bold;
+  &:hover {
+    color: $dark-blue;
+    @extend %trn;
+  }
+}
+
+// Image
+
+%img {
+  display: block;
+  margin: 0 auto;
+  &:hover {
+    transform: rotate(360deg);
+    transition: all .5s;
+  }
+}

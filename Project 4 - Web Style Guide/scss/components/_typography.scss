@@ -1,0 +1,38 @@
+// Import if Google Fonts URL is defined
+
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+.container {
+  color: $grey;
+  font-family: $font-stack;
+}
+
+.headline {
+    @include m(primary) {
+    @extend %hdln-prim;
+  }
+    @include m(secondary) {
+    @extend %hdln-sec;
+    margin: em(50px) 0 em(40px) 0;
+  }
+}
+
+@include mq('medium') {
+  .card > p {
+    width: 80%;
+  }
+}
+
+.link {
+  @extend %no-txt-undln;
+  @extend %link;
+}
+
+.blockquote {
+  @extend %left-border-style;
+  font-size: em(20px);
+  font-style: italic;
+  font-weight: $font-weight--light;
+}

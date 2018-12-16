@@ -1,0 +1,35 @@
+.nav {
+    padding: 0;
+    text-align: center;
+    @include mq('medium') {
+    @include flexbox($dir: row,
+                     $just: space-between
+                     );
+    width: 80%;
+    margin: em(-10px) 0 0 em(220px);
+    }
+    @include e(item) {
+      margin-top: em(15px);
+      padding-top: em(17px);
+
+      a {
+        @extend %no-txt-undln;
+        color: palette(grey, dark);
+        font-weight: $font-weight--light;
+        &:hover {
+          @extend %trn;
+          color: palette(grey, light);
+        }
+      }
+      &:first-child {
+        background-color: $emerald;
+        @extend %border-style;
+        &:hover {
+          @extend %trn;
+        }
+      a {
+        color: $white;
+      }
+    }
+  }
+}

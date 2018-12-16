@@ -1,0 +1,50 @@
+.container {
+  margin: em(50px) em(30px);
+  @include mq('medium') {
+    margin: 0 em(80px);
+  };
+}
+
+.grid__row {
+  margin: em(10px) 0 em(50px) 0;
+  @include mq('medium') {
+        @include flexbox($just: space-around);
+        .centered {
+          margin: auto;
+        }
+      }
+    }
+
+[class^="grid__col--"] {
+  @include flexbox($dir: column);
+  margin-bottom: em(5px);
+  @extend %border-style;
+  @include mq('medium') {
+    flex-direction: row;
+    justify-content: space-between;
+    > button {
+      justify-content: space-between;
+      padding-left: em(20px);
+      margin: 0 em(30px);
+      width: em(200px);
+    }
+  }
+}
+
+.grid__col {
+  @include color-modifiers($grid-colors);
+}
+
+// Calculate grid columns
+
+  @include mq('medium') {
+    @for $i from 1 through $grid-col-count {
+      $context: grid-context($grid-col-width, $grid-col-count, $grid-gutter-width) !global;
+      $target: ($grid-col-width * $i) + ($grid-gutter-width * ($i - 1));
+
+      //Generate column modifier classes
+      .grid__col--#{$i} {
+        width: percentage($target / $context);
+      }
+    }
+  }
