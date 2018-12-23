@@ -1,0 +1,51 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.photo-gallery {
+  margin: 1em 10em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+.photo-gallery img {
+  padding: 1.5em;
+  width: 300px;
+}
+
+input{
+  margin: 2em auto .5em auto;
+  padding: .8em .5em;
+  display: block;
+  width: 40%;
+  border-radius: 8px 8px;
+  font-size: 1em;
+  border-color: #D3D3D3;
+
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid;
+  background-color: #FFF8DC;
+  transition: all .3s;
+  border-color: #20B2AA;
+}
+
+@media screen and (min-width: 768px) {
+
+  .photo-gallery img {
+    width: 90%;
+  }
+}
