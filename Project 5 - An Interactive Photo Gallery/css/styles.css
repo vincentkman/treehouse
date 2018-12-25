@@ -12,14 +12,14 @@ body {
   margin: 0 auto;
 }
 
-.photo-gallery {
+#photo-gallery {
   margin: 1em 10em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   }
 
-.photo-gallery img {
+#photo-gallery img {
   padding: 1.5em;
   width: 300px;
 }
@@ -45,7 +45,7 @@ input:focus {
 
 @media screen and (min-width: 768px) {
 
-  .photo-gallery img {
+  #photo-gallery img {
     width: 90%;
   }
 }
