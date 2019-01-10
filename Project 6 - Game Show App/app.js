@@ -30,7 +30,6 @@ let missed = 0;
 let getRandomPhraseAsArray = (arr) => {
   let randNum = Math.floor(Math.random() * arr.length);
   let chosenPhrase = arr[randNum].toUpperCase().split('');
-  console.log(chosenPhrase)
   return chosenPhrase;
 }
 
