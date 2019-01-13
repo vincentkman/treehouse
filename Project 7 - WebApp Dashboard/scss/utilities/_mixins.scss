@@ -1,0 +1,67 @@
+// ======================================
+//  Flexbox Settings
+// ======================================
+
+  @mixin flexbox (
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null,
+  $align: null,) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $align;
+  @content;
+}
+
+// ======================================
+//  Media Queries
+// ======================================
+
+  @mixin mq($break) {
+    @if $break == 'small' {
+      @media (min-width: $break-s) and (max-width: $break-m) {
+        @content;
+      }
+    }
+    @else if $break == 'medium' {
+      @media (min-width: $break-m + 1) {
+        @content;
+      }
+    }
+    @else if $break == 'large' {
+      @media (min-width: $break-l) {
+        @content;
+      }
+    }
+    @else {
+      @error "No value could be retrieved for #{$break}";
+    }
+  }
+
+
+// BEM selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Color themes
+
+@mixin color-modifiers($map) {
+  @each $theme, $color in $map {
+    &--#{$theme}.theme__colors {
+      background-color: $color;
+    }
+  }
+}

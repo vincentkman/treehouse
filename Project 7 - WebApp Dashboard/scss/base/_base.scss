@@ -1,0 +1,15 @@
+// ======================================
+//  Base Styles
+// ======================================
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  line-height: ($base__line/$base__font-size);
+}
