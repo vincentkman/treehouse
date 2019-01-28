@@ -1,0 +1,30 @@
+.main-traffic {
+  grid-area: mainTraffic;
+  @extend %border-bottom;
+  padding: em(30px);
+  @include e(btn) {
+    @include flexbox($just: flex-end);
+    width: 100%;
+    @include m(chart) {
+      @extend %btn-small;
+      margin-bottom: em(30px);
+    }
+  }
+}
+
+.daily-traffic {
+  grid-area: dailyTraffic;
+  @extend %border-bottom;
+  padding: em(30px);
+}
+
+.mobile-users {
+  grid-area: mobileUsers;
+  @extend %border-bottom;
+  @extend %border-left;
+  padding: em(30px);
+}
+
+canvas {
+  max-width: 85vw;
+}

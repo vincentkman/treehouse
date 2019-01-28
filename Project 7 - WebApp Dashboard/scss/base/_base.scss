@@ -2,8 +2,11 @@
 //  Base Styles
 // ======================================
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+  font-family: $font-stack;
 }
 
 ul {
@@ -12,4 +15,8 @@ ul {
 
 p {
   line-height: ($base__line/$base__font-size);
+}
+
+body {
+  margin:0;
 }

@@ -1,0 +1,17 @@
+.message-user {
+  grid-area: messageUser;
+  padding: em(30px);
+  @extend %border-bottom;
+  @include e(title) {
+  }
+  @include e(form) {
+    @extend %input-box-style;
+    background-color: lighten($grey, 30%);
+  }
+  @include e(msg) {
+    text-align: center;
+  }
+  @include e(btn) {
+    @extend %btn-style;
+  }
+}

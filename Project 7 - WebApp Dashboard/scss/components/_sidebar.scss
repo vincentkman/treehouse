@@ -1,0 +1,25 @@
+
+.sidebar {
+  grid-area: sidebar;
+  @include pos($pos: sticky, $top: em(90px), $left: 0);
+  position: sticky;
+  z-index: 1;
+  margin-top: em(-16px);
+  @include e(item) {
+    @include flexbox($dir: row,$just: space-between,$align: center);
+    background-color: $dark-purple;
+    padding-left: em(10px);
+    @include mq("medium") {
+      @include flexbox($dir: column, $just: flex-start, $align: flex-start);
+        width: em(80px);
+        height: 100%;
+    }
+    @include e(icon) {
+      @extend %icon;
+      @extend %mouseover;
+      @include mq("medium") {
+        margin: em(20px) 0 em(10px) em(3px);
+      }
+    }
+  }
+}

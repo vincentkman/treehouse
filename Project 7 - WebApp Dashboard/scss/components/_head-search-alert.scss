@@ -1,0 +1,60 @@
+
+.head-search {
+  grid-area: headSearch;
+  margin-top: em(-15px);
+  padding: em(30px) em(40px);
+  @include mq("medium") {
+  background-color: palette(grey, x-light);
+  border-radius: $br--default;
+  border: solid $grey;
+  border-width: 0 0 1px 1px;
+  margin-left: em(380px);
+  }
+  @include e(title) {
+    display: none;
+    @include mq("medium") {
+      display: inline-block;
+      @include pos($pos: absolute, $left: em(90px));
+    }
+  }
+  @include e(search-box) {
+    @include e(bar) {
+      @extend %input-box-style;
+      background-color: lighten($grey, 30%);
+    }
+  }
+}
+
+
+.alert {
+  grid-area: alert;
+  @include e(msg1) {
+    @extend %alert-box;
+    margin: em(40px) 0 em(20px) em(40px);
+    @include e(close-btn) {
+      font-weight: $font-weight--bold;
+      @extend %mouseover;
+      margin-right: em(20px);
+    }
+    @include e(heading) {
+      margin-right: em(5px);
+    }
+    @include e(notice) {
+      margin-right: em(40px);
+    }
+  }
+  @include e(msg2) {
+    @extend %alert-box;
+    @include e(close-btn) {
+      font-weight: $font-weight--bold;
+      @extend %mouseover;
+      margin-right: em(20px);
+    }
+    @include e(heading) {
+      margin-right: em(5px);
+    }
+    @include e(notice) {
+      margin-right: em(40px);
+    }
+  }
+}

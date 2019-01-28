@@ -1,0 +1,42 @@
+.social-stats {
+  grid-area: socialStats;
+  @include flexbox($dir: column);
+  @extend %border-bottom;
+  width: 100%;
+  padding: em(30px);
+  @include mq("large") {
+    @include flexbox($dir: row);
+  }
+  @include e(title) {
+    padding-bottom: em(50px);
+  }
+  @include e(item) {
+    @include flexbox($align: center, $just: center);
+    @extend %border-style;
+    margin: em(60px) em(30px) 0 0;
+    background-color: lighten($grey, 25%);
+    @include e(icon) {
+      @include roundy($dim: em(120px), $br:$br--round, $bcolor: $purple);
+      border: 0;
+      padding: em(40px) em(10px) em(50px) em(35px);
+      margin: em(10px) em(10px) em(10px) em(10px);
+    }
+    @include e(text) {
+      margin-bottom: em(25px);
+      padding-left: em(10px);
+      @include e(name) {
+        font-weight: $font-weight--bold;
+        color: $purple;
+      }
+      @include e(metric) {
+        font-size: em(38px);
+        font-weight: $font-weight--light;
+        margin-right: em(10px);
+      }
+    }
+  }
+}
+
+.twitter {
+  margin-left: em(35px);
+}

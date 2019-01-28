@@ -1,0 +1,28 @@
+.settings {
+  grid-area: settings;
+  padding: em(30px);
+  @extend %border-left;
+  @extend %border-bottom;
+  @include e(toggle) {
+    @include pos($pos: absolute, $left: em(235px), $top: em(-23px));
+  }
+  @include e(timezone) {
+    @include e(select) {
+      height:em(50px);
+      width: 100%;
+      @extend %input-box-style;
+      margin: em(30px) 0 em(6px) 0;
+    }
+  }
+  @include e(btn) {
+    @include flexbox($just: space-between);
+    @include e(save) {
+      @extend %btn-style-half;
+      margin: em(10px) em(10px) 0 0;
+    }
+    @include e(cancel) {
+      @extend %btn-style-half;
+      margin: em(10px) 0 0 em(10px);
+    }
+  }
+}

@@ -1,0 +1,153 @@
+// No underline
+
+%no-txt-undln {
+  text-decoration: none;
+}
+
+// Screen reader text
+
+%srt {
+  text-indent: -9999px;
+}
+
+//Headlines
+
+%hdln-prim {
+  font-size: em(30px);
+  font-weight: $font-weight--ultra-bold;
+  color: $dark-grey;
+  letter-spacing: $letter-space;
+}
+
+%hdln-sec {
+  font-size: em(20px);
+  font-weight: $font-weight--ultra-bold;
+  letter-spacing: $letter-space;
+}
+
+// Border
+
+%border-style {
+  border: 2px solid $light-grey;
+  border-radius: $br--default;
+}
+
+
+%border-line {
+  border-top: 1px solid $grey;
+}
+
+%border-bottom {
+  border-bottom: 1px solid $light-grey;
+}
+
+%border-left {
+  border-left: 1px solid $light-grey;
+}
+
+// Transition
+
+%trn {
+  opacity: .8;
+  transition: $trns-duration;
+}
+
+// Button
+
+%btn-style {
+  @extend %btn-default;
+  width: 100%;
+}
+
+%btn-style-half {
+  @extend %btn-default;
+  width: 50%;
+  &:focus {
+    outline: none;
+  }
+}
+
+%btn-default {
+  @extend %mouseover;
+  font-size: em(13px);
+  font-weight: $font-weight--medium;
+  color: $white;
+  background-color: $purple;
+  border-radius: $br--default;
+  border: none;
+  padding: em(15px) em(15px);
+
+}
+
+%btn-small {
+  border: none;
+  font-size: em(18px);
+  font-weight: $font-weight--bold;
+  border-radius: $br--default;
+  margin-left: em(10px);
+  padding: em(10px);
+  &:focus {
+    background-color: $green;
+    outline: none;
+  }
+}
+
+// Mouseover
+
+%mouseover {
+  cursor: pointer;
+  &:hover {
+    opacity: .5;
+    @extend %trn;
+  }
+  &:focus {
+    opacity: 1;
+  }
+  &:active {
+    opacity: .8;
+  }
+}
+
+// Alert message box
+
+%alert-box {
+  width: 90%;
+  background-color: darken($green, 15%);
+  border-radius: $br--default;
+  color: $black;
+  padding: em(10px) em(20px);
+  margin: 0 em(40px);
+}
+
+// Form Input Box
+
+%input-box-style {
+  width: 100%;
+  border-radius: $br--default;
+  border: none;
+  font-size: $base__font-size;
+  padding: em(13px);
+  margin: em(15px) 0 em(10px) 0;
+  &:focus {
+    outline: none;
+    background-color: $light-yellow;
+    transition: all $trns-duration;
+  }
+}
+
+// Image
+
+%img {
+  @include roundy($dim: em(50px), $br: em(15px) em(50px) em(30px) em(5px));
+  &:hover {
+    opacity: .5;
+    transition: $trns-duration;
+  }
+}
+
+%icon {
+  height: em(50px);
+  width: em(50px);
+  padding: em(6px);
+  margin-right: em(12px);
+}

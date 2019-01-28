@@ -1,0 +1,93 @@
+
+.header {
+  grid-area: header;
+  @include pos($pos: sticky, $top: 0, $bottom:0, $left: 0);
+  z-index: 999;
+  background: $purple;
+  @include e(app-title) {
+    @include pos($pos: absolute, $top: em(15px), $left: em(20px));
+    font-size: em(30px);
+    @include m(bold) {
+      font-weight: $font-weight--bold;
+      color: $white;
+    }
+  @include m(thin) {
+    color: $light-grey;
+    font-weight: $font-weight--thin;
+  }
+}
+
+  @include e(icon) {
+    margin-top: em(10px);
+    @include flexbox($just: flex-end);
+    height: em(16px);
+    @include m(avatar) {
+      @extend %img;
+      margin: em(10px) em(20px) em(10px) em(20px);
+    }
+    @include e(name) {
+      display: none;
+      @include mq("medium") {
+        display: inline-block;
+        margin: em(30px) em(20px) 0 em(-10px);
+      }
+    }
+    @include m(bell) {
+      @include pos($pos: absolute, $top: em(30px), $right: em(120px));
+      @include mq("medium") {
+        top: em(30px);
+        right: em(235px);
+      }
+      @extend %mouseover;
+    }
+    @include m(bell-circle) {
+      @include roundy($dim: em(10px), $br: $br--round, $bcolor: $green);
+      margin: em(15px) em(13px) 0 0;
+    }
+    @include m(line) {
+      font-weight: $font-weight--thin;
+      color: $black;
+      font-size: em(50px)
+    }
+  }
+
+
+  @include e(dropdown) {
+      height: em(80px);
+    @include e(panel) {
+      @include pos($pos: absolute, $top: em(110px), $right: em(70px));
+      @include roundy($dim:em(320px), $br: $br--default, $bcolor: $white);
+      z-index: -9999;
+      display: none;
+      list-style: none;
+      border: solid $grey;
+      @include e(title) {
+      }
+      @include e(item) {
+        margin-top: em(-15px);
+        @include e(close) {
+          @include pos($pos: relative, $top: em(-25px));
+          @extend %mouseover;
+          font-weight: $font-weight--bold;
+          margin-left: em(250px);
+        }
+        @include m(avatar) {
+          @include pos($pos: absolute, $left: em(15px));
+          @extend %img;
+        }
+        @include e(msg) {
+          padding-left: em(35px);
+          @include m(bold) {
+            font-weight: $font-weight--bold;
+          }
+          @include m(thin) {
+            font-weight: $font-weight--thin;
+          }
+        }
+        @include e(time) {
+          padding-left: em(35px);
+        }
+      }
+    }
+  }
+}

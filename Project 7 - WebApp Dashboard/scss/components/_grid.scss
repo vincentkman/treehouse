@@ -1,0 +1,51 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-area: content;
+  grid-gap: 1px;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "headSearch"
+  "alert"
+  "mainTraffic"
+  "dailyTraffic"
+  "mobileUsers"
+  "socialStats"
+  "newMembers"
+  "activity"
+  "messageUser"
+  "settings";
+  ;
+
+  @include mq("medium") {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:
+    "headSearch headSearch"
+    "alert alert"
+    "mainTraffic mainTraffic"
+    "dailyTraffic mobileUsers"
+    "socialStats socialStats"
+    "newMembers activity"
+    "messageUser settings"
+    ;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "header"
+  "sidebar"
+  "content";
+
+  @include mq('medium') {
+    grid-template-rows: auto;
+    grid-template-columns: 10% 90%;
+    grid-template-areas:
+      "header header"
+      "sidebar content";
+  }
+}

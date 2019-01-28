@@ -1,0 +1,29 @@
+.member {
+  grid-area: newMembers;
+  padding: em(30px);
+  @extend %border-bottom;
+  @include e(profile) {
+     @include flexbox();
+     margin: em(30px) em(30px) em(30px) 0;
+     @include m(avatar) {
+       @extend %img;
+       margin-right: em(10px);
+       object-fit: contain;
+       align-self: flex-start;
+     }
+     @include e(text) {
+       @include e(name) {
+         font-weight: $font-weight--bold;
+       }
+       @include e(email) {
+        a {
+          @extend %no-txt-undln;
+          color: $purple;
+        }
+       }
+       @include e(date) {
+         padding-top: em(20px);
+      }
+     }
+    }
+   }

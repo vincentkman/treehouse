@@ -1,0 +1,31 @@
+
+.activity {
+  grid-area: activity;
+  @extend %border-bottom;
+  @extend %border-left;
+  padding: em(30px);
+  @include e(post) {
+    @include flexbox();
+    margin: em(30px) em(30px) em(30px) 0;
+    @include m(avatar) {
+      @extend %img;
+      object-fit: contain;
+      align-self: flex-start;
+      margin-right: em(10px);
+    }
+    @include e(text) {
+      @include e(item) {
+        @include e(name) {
+          font-weight: $font-weight--bold;
+        }
+        @include e(arrow) {
+          @include pos($pos: absolute, $right: em(10px));
+          font-size: $base__line;
+          font-weight: $font-weight--light;
+          color: $purple;
+          @extend %mouseover;
+        }
+      }
+    }
+  }
+}

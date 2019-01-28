@@ -13,10 +13,3 @@
 @function palette($palette, $shade: 'base') {
   @return map-get(map-get($palettes, $palette), $shade);
 }
-
-// Set the "context" wisdth for the grid
-
-@function grid-context($grid-col-width, $grid-col-count, $grid-gutter-width) {
-  $grid-context: ($grid-col-width * $grid-col-count) + ($grid-gutter-width * ($grid-col-count - 1));
-  @return $grid-context;
-}

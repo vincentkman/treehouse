@@ -16,6 +16,22 @@
   @content;
 }
 
+
+// ======================================
+// Rounded elements
+// ======================================
+
+@mixin roundy(
+$dim,
+$br,
+$bcolor: null) {
+  width: $dim;
+  height: $dim;
+  border-radius: $br;
+  background: $bcolor;
+  @content;
+}
+
 // ======================================
 //  Media Queries
 // ======================================
@@ -41,8 +57,9 @@
     }
   }
 
-
+// ======================================
 // BEM selectors
+// ======================================
 
 @mixin e($element) {
   &__#{$element} {
@@ -56,12 +73,20 @@
   }
 }
 
-// Color themes
+// ======================================
+// Position Property
+// ======================================
 
-@mixin color-modifiers($map) {
-  @each $theme, $color in $map {
-    &--#{$theme}.theme__colors {
-      background-color: $color;
-    }
-  }
+@mixin pos(
+$pos,
+$top: null,
+$right: null,
+$bottom: null,
+$left: null) {
+  position: $pos;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  @content;
 }

@@ -22,7 +22,7 @@ $grey           : #9e9e9e;
 $blue           : #3FABC6;
 $emerald        : #79EBD1;
 $orange         : #F07F5F;
-$purple         : #8D7DBC;
+$purple         : #7175C1;
 $sky-blue       : #77DAF7;
 $green          : #87DB9F;
 $red            : #FF0000;
@@ -33,13 +33,17 @@ $light-red      : #E8A0A0;
 $light-orange   : lighten($orange, 5%);
 $light-blue     : #44AAC0;
 $light-purple   : #DCB3EE;
-$light-grey     : lighten($grey, 10%);
+$light-grey     : #bbbbbb;
 $light-mulberry : #E1B1EF;
 $light-yellow   : #FFF8DC;
+$light-green    : #79C88D;
 
 $dark-blue      : darken($blue, 5%);
 $dark-green     : darken($green, 10%);
+$dark-purple    : #4B4D72;
+$dark-grey      : #666;
 $sea-green      : #20B2AA;
+$floral-white   : #eae9e1;
 
 // Color Usage
 
@@ -67,34 +71,6 @@ $palettes: (
   )
 );
 
-
-// UI Colors
-
-$ui-colors: (
-default:  $sky-blue,
-success:  $dark-green,
-error:    $soft-red,
-warning:  $orange,
-info:     $purple,
-);
-
-// Grid Colors
-
-$grid-colors: (
-1:  $grey,
-2:  $orange,
-3:  $light-purple,
-4:  $sky-blue,
-5:  $green,
-6:  $dark-blue,
-7:  $light-red,
-8:  $light-orange,
-9:  $light-mulberry,
-10: $purple,
-11: $blue,
-12: $emerald
-);
-
 // Text
 
 $base__font-size   : 16px;
@@ -113,13 +89,6 @@ $trns-duration     : .5s;
 // Path to Assets
 
 $path--rel          : "../images";
-
-// Grid
-
-$grid-col-width        : 65px;
-$grid-gutter-width     : 20px;
-$grid-col-count        : 12;
-$grid-cont-max-width   : 1050px;
 
 // Layout
 $max-width: 1050px;
