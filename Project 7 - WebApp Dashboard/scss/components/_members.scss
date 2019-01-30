@@ -28,7 +28,7 @@
          @include e(date) {
            @include flexbox();
            @include mq("large") {
-            @include pos($pos: absolute, $right: em(780px));
+            @include pos($pos: absolute, $right: em(700px));
            }
          }
        }
