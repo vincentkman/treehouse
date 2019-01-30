@@ -2,6 +2,7 @@
   grid-area: socialStats;
   @include flexbox($dir: column);
   @extend %border-bottom;
+  @extend %border-left;
   width: 100%;
   padding: em(30px);
   @include mq("large") {

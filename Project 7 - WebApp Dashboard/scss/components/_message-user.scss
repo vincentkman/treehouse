@@ -2,6 +2,7 @@
   grid-area: messageUser;
   padding: em(30px);
   @extend %border-bottom;
+  @extend %border-left;
   @include e(title) {
   }
   @include e(form) {

@@ -6,6 +6,8 @@
   padding: em(30px);
   @include e(post) {
     @include flexbox();
+    @extend %border-bottom;
+    padding-bottom: em(25px);
     margin: em(30px) em(30px) em(30px) 0;
     @include m(avatar) {
       @extend %img;
@@ -19,11 +21,14 @@
           font-weight: $font-weight--bold;
         }
         @include e(arrow) {
-          @include pos($pos: absolute, $right: em(10px));
+          @include pos($pos: absolute, $right: em(15px));
           font-size: $base__line;
           font-weight: $font-weight--light;
           color: $purple;
           @extend %mouseover;
+          @include mq("large") {
+            @include pos($pos: absolute, $right: em(40px));
+          }
         }
       }
     }
