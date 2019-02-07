@@ -2,7 +2,6 @@
 .sidebar {
   grid-area: sidebar;
   @include pos($pos: sticky, $top: em(90px), $left: 0);
-  position: sticky;
   z-index: 1;
   margin-top: em(-16px);
   @include e(item) {
