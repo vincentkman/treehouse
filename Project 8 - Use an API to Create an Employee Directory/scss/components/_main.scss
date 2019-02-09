@@ -1,0 +1,51 @@
+
+.main {
+  @include e(directory) {
+      width: 100%;
+      @include mq('medium') {
+        @include flexbox($wrap: wrap, $just: center, $align: center);
+      }
+    @include e(boxes) {
+      @extend %mouseover;
+      @include flexbox($disp: row, $align: center, $just: center);
+      @include roundy($h: em(160px), $w: em(400px), $br: $br--default);
+      border: 1px solid $light-grey;
+      padding:em(5px);
+      margin: em(15px);
+      @include e(img) {
+        margin: em(25px) 0 0 em(30px);
+        object-fit: contain;
+        @include flexbox($just: flex-start);
+      }
+      @include e(detail) {
+        margin: em(-100px) 0 0 em(145px);
+      }
+    }
+  }
+
+  @include e(modal) {
+    display: none;
+    @include pos($pos: fixed, $top:50%, $left:50%);
+    @include roundy($br: em(10px), $bcolor: white);
+    border: 1px solid $light-grey;
+    z-index: 1;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    padding: em(50px) em(60px);
+    @include e(close-btn) {
+      @include pos($pos: absolute, $top:em(10px), $right:em(10px));
+      @include roundy($h: em(40px), $w: em(40px), $br: $br--default, $bcolor: $light-grey);
+      @extend %mouseover;
+    }
+  }
+
+  @include e(overlay) {
+    display: none;
+    @include pos($pos: fixed, $top:0, $left:0);
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    background-color: rgba(0,0,0,0.5);
+  }
+}

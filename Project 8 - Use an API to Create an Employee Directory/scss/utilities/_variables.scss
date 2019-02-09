@@ -1,0 +1,100 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Fonts
+$font-url                 : 'https://fonts.google.com/specimen/Lato?selection.family=Lato:100,300,400,700,900';
+$font-stack               : 'Lato', 'Helevtica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--thin         : 100;
+$font-weight--light        : 300;
+$font-weight--medium       : 400;
+$font-weight--bold         : 700;
+$font-weight--ultra-bold   : 900;
+
+// Descriptive Base Colors
+
+$white          : #fff;
+$black          : #0b0b0b;
+$grey           : #9e9e9e;
+$blue           : #3FABC6;
+$emerald        : #79EBD1;
+$orange         : #F07F5F;
+$purple         : #7175C1;
+$sky-blue       : #77DAF7;
+$green          : #87DB9F;
+$red            : #FF0000;
+
+$soft-red       : #D68C8B;
+
+$light-red      : #E8A0A0;
+$light-orange   : lighten($orange, 5%);
+$light-blue     : #44AAC0;
+$light-purple   : #DCB3EE;
+$light-grey     : #bbbbbb;
+$light-mulberry : #E1B1EF;
+$light-yellow   : #FFF8DC;
+$light-green    : #79C88D;
+
+$dark-blue      : darken($blue, 5%);
+$dark-green     : darken($green, 10%);
+$dark-purple    : #4B4D72;
+$dark-grey      : #666;
+$sea-green      : #20B2AA;
+$floral-white   : #eae9e1;
+
+// Color Usage
+
+$color-primary        : $emerald;
+$color-primary-light  : lighten($color-primary, 15%);
+$color-secondary      : $light-blue;
+$color-accent         : $emerald;
+$color-shadow         : rgba($black, .2);
+
+// Color Pallette Modifiers
+
+$palettes: (
+  grey: (
+  xx-light : lighten($grey, 43%),
+  x-light  : lighten($grey, 35%),
+  light    : lighten($grey, 12%),
+  base     : $grey,
+  dark     : darken($grey, 8%),
+  x-dark   : darken($grey, 16%)
+  ),
+  black: (
+  light    : lighten($black, 10%),
+  base     : $black,
+  dark     : darken($black, 10%)
+  )
+);
+
+// Text
+
+$base__font-size   : 16px;
+$base__line        : 24px;
+$letter-space      : 1px;
+
+// Border Radius
+
+$br--default       : 5px;
+$br--round         : 50%;
+
+// Transitions
+
+$trns-duration     : .5s;
+
+// Path to Assets
+
+$path--rel          : "../images";
+
+// Layout
+$max-width: 1050px;
+$gutter: 10px;
+
+// Breakpoints
+$break-s: 1px;
+$break-m: 768px;
+$break-l: 1024px;

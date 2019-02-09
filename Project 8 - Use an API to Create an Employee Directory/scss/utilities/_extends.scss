@@ -1,0 +1,30 @@
+
+// Transition
+
+%trn {
+  opacity: .8;
+  transition: $trns-duration;
+}
+
+// Mouseover
+
+%mouseover {
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    opacity: .5;
+    @extend %trn;
+  }
+  &:focus {
+    opacity: 1;
+  }
+  &:active {
+    opacity: .8;
+  }
+}
+
+// Image
+
+%img {
+  @include roundy($h: em(90px), $w: em(90px),$br: em(15px) em(50px) em(30px) em(5px));
+}

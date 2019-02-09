@@ -1,0 +1,22 @@
+// ======================================
+//  Base Styles
+// ======================================
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: $font-stack;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  color: $grey;
+}
+
+body {
+  margin:0;
+}
