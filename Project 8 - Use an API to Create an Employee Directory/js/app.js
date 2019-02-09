@@ -2,7 +2,6 @@
 //  Global Variables
 // ======================================
 
-const search = $('#searchbox');
 const directory = $('#directory');
 const overlay = $('#overlay');
 const modal = $('#modal');
