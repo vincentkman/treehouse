@@ -126,7 +126,7 @@ fetchInfo
        overlay.fadeOut(400);
    });
 
-// To proceed to the modal when clicking on an individual profile card
+// To proceed to the modal when clicking on an individual profile box
    createBox(profile);
    overlay.show();
    modal.fadeIn(500);
