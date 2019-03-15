@@ -1,0 +1,19 @@
+.navbar {
+  background: rgba(0,0,0,0.8);
+  text-transform: uppercase;
+  padding: em(15px);
+  @include e(toggler) {
+    &:focus {
+      outline: none;
+    }
+  }
+  @include e(navbar-nav) {
+    @include flexbox($align: center);
+    @include e(nav-item) {
+      padding-right: em(20px);
+      @include e(nav-link) {
+        font-size: em(16px) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+// No underline
+
+%no-txt-undln {
+  text-decoration: none;
+}
+
+// Screen reader text
+
+%srt {
+  text-indent: -9999px;
+}
+
+//Headlines
+
+%hdln-prim {
+  font-size: em(30px);
+  font-weight: $font-weight--ultra-bold;
+  color: $dark-grey;
+  letter-spacing: $letter-space;
+}
+
+%hdln-sec {
+  font-size: em(20px);
+  font-weight: $font-weight--ultra-bold;
+  letter-spacing: $letter-space;
+}
+
+// Border
+
+%border-style {
+  border: 2px solid $light-grey;
+  border-radius: $br--default;
+}
+
+
+%border-line {
+  border-top: 1px solid $grey;
+}
+
+%border-top {
+  border-top: 1px solid $light-grey;
+}
+
+%border-bottom {
+  border-bottom: 1px solid $light-grey;
+}
+
+%border-left {
+  border-left: 1px solid $light-grey;
+}
+
+// Transition
+
+%trn {
+  opacity: .8;
+  transition: $trns-duration;
+}
+
+// Mouseover
+
+%mouseover {
+  cursor: pointer;
+  &:hover {
+    opacity: .5;
+    @extend %trn;
+  }
+  &:focus {
+    opacity: 1;
+  }
+  &:active {
+    opacity: .8;
+  }
+}
+
+
+// Image
+
+%img {
+  @include roundy($dim: em(250px), $br: $br--round);
+  border: 3px solid white;
+  transition: all .6s;
+  &:hover {
+    opacity: .5;
+    transition: $trns-duration;
+    transform: scale(1.2) rotate(5deg);
+  }
+}
+
+%icon {
+  height: em(50px);
+  width: em(50px);
+  padding: em(6px);
+  margin-right: em(12px);
+}
+
+// Header and Footer background elements
+
+%landing {
+  position: relative;
+  display: table;
+  background: #E9ECEF;
+  z-index: -1;
+}
+
+%wrap {
+  clip: rect(0, auto, auto, 0);
+  @include pos($pos: absolute, $top: 0, $left: 0);
+  @include dim($w: 100%, $h: 100%);
+}
+   
+%inner {
+  display: table;
+  @include dim($w: 100%, $h: 100%);
+  background-size: cover;
+  background-position: center center;
+  filter: grayscale(100%);
+}
+
+%caption {
+  width: 100%;
+  max-width: 100%;
+  z-index: 1;
+}
+
+// Glowing text
+
+%glow-text {
+  color: white;
+  text-shadow: 0 0 20px $green;
+  text-transform: uppercase;
+  &:after {
+    content: attr(data-text);
+    @include pos($pos: absolute, $top: 0, $left: 0);
+    z-index: -1;
+    color: $green;
+    filter: blur(15px);
+    }
+}

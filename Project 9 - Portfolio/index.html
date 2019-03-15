@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" name="viewport">
+  <title>VM Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body data-spy="scroll" data-target="#menu">
+
+  <div class="home">
+
+ <!-- Navigation -->
+
+ <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
+   <div class="container-fluid">
+     <a class= "navbar__brand navbar-brand" href="#"><img src="images/logo1.png" height="90"></a>
+     <button class="navbar__toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+        <span class="navbar__toggler__toggler-icon navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar__collapse navbar-collapse collapse" id="nav">
+          <ul class="navbar__navbar-nav navbar-nav ml-auto">
+            <li class="navbar__navbar-nav__nav-item nav-item active">
+              <a class="navbar__navbar-nav__nav-item__nav-link nav-link" href="#home">Home</a>
+            </li>
+            <li class="navbar__navbar-nav__nav-item nav-item">
+              <a class="navbar__navbar-nav__nav-item__nav-link nav-link" href="#about">About</a>
+            </li>
+            <li class="navbar__navbar-nav__nav-item nav-item">
+              <a class="navbar__navbar-nav__nav-item__nav-link nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="navbar__navbar-nav__nav-item nav-item">
+              <a class="navbar__navbar-nav__nav-item__nav-link nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="navbar__navbar-nav__nav-item nav-item">
+              <a class="navbar__navbar-nav__nav-item__nav-link nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+   </div>
+ </nav>
+
+    <!-- Landing Page -->
+
+    <div id="home">
+      <div class="home__landing">
+        <div class="home__wrap">
+          <div id="home-background" class="home__inner">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home__caption caption">
+      <h1 class="home__caption__title" data-text="Hello, I'm Vincent K Man">Hello, I'm Vincent K Man</h1>
+      <p>Front End Developer</p>
+      <div>
+        <a href="#about"><button class="btn btn-outline-light btn-lg">Find Out More</button></a>
+        <a href="#contact"><button class="btn btn-outline-light btn-lg">Get in Touch</button></a>
+      </div>
+    </div>
+  </div>
+
+     <!-- About Section-->
+    <div id="about" class="about container-fluid padding">
+      <div class="row text-center">
+        <div class="col-lg-12">
+          <h1 class="display-4">About</h1>
+          <p class="lead">I'm a self taught front-end web developer currently living in London, UK.</p>
+          <p class="lead">I enjoy solving real world problems through coding. As I code every single day, my passion in Web Development continues to grow massively.</p>
+        </div>
+        <div class="col-lg-12">
+          <img src="images/me2.jpg" class="about__profile-img">
+        </div>
+      </div>
+    </div> <!--End About Section-->
+
+    <hr class="my-4">
+
+    <div id="skills" class="skills container-fluid padding">
+        <h1 class="text-center display-4">Skills</h1>
+      <div class="row text-center padding">
+
+        <div class="skills__icon col-xs-12 col-sm-6 col-md-2">
+          <i class="html fab fa-html5 skills__icon--size"></i>
+        </div>
+        <div class="skills__icon col-xs-12 col-sm-6 col-md-2">
+          <i class="css fab fa-css3-alt skills__icon--size"></i>
+        </div>
+        <div class="skills__icon col-xs-12 col-sm-6 col-md-2">
+          <i class="sass fab fa-sass skills__icon--size"></i>
+        </div>
+        <div class="skills__icon col-xs-12 col-sm-6 col-md-2">
+          <i class="boot fas fa-bold skills__icon--size"></i>
+        </div>
+        <div class="skills__icon col-xs-12 col-sm-12 col-md-2">
+          <i class="js fab fa-js-square skills__icon--size"></i>
+        </div>
+        <div class="skills__icon col-sm-12 col-md-2">
+          <i class="python fab fa-python skills__icon--size"></i>
+        </div>
+      </div>
+      <hr class="my-4">
+    </div>
+
+    <!-- Portfolio -->
+    <div class="row text-center">
+    <div class="col-12">
+      <h1 class="display-4">Portfolio</h1>
+      <p>Click on the image to see the project description</p>
+    <div class="container-fluid">
+      <div class="row portfolio__jumbotron jumbotron">
+    <div id="portfolio" class="portfolio container-fluid padding">
+      </div>
+      <hr>
+    </div>
+    </div>
+        <div id="modal" class="portfolio__modal"></div>
+        <div id="overlay" class="portfolio__overlay"></div>
+      </div>
+    </div>
+  </div>
+
+<footer>
+<div id="contact" class="contact">
+  <!-- <h1 class="display-4">Contact Me</h1> -->
+  <div class="contact__landing">
+    <div class="contact__wrap">
+      <div class="contact__inner">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contact__caption caption center-block">
+  <div class="row text-center">
+  <div class="col-md-12">
+  <img class="contact__img" src="images/logo1.png" height="90">
+  <p><span class="fas fa-phone"></span> 07375270289</p>
+  <p><span class="fas fa-location-arrow"></span> London, UK</p>
+  <p><a class="contact__caption__link" href="mailto:vincentkman@yahoo.com"><span class="far fa-envelope-open"></span> vincentkman@yahoo.com</p>
+</div>
+</div>
+<div class="contact__social container-fluid">
+  <div class="row text-center">
+    <div class="col-md-12 contact__social__icon">
+      <a href="#"><i class="contact__social__icon--img fab fa-linkedin-in contact__social__icon--hover"></i></a>
+      <a href="#"><i class="contact__social__icon--img fab fa-github contact__social__icon--hover"></i></a>
+      <a href="#"><i class="contact__social__icon--img fab fa-twitter contact__social__icon--hover"></i></a>
+    </div>
+  </div>
+    <p class="contact__copyright text-center">Copyright &copy; 2019 Vincent K Man</p>
+</div>
+</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.ripples-min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.skills {
+  @include e(icon) {
+    &:hover {
+      animation: icon 2s linear infinite;
+    }
+    @include m(size) {
+      position: relative;
+      font-size: em(65px);
+    }
+  }
+}
+
+@keyframes icon {
+  0% {
+    transform: skewX(0);
+  }
+  100% {
+      transform: skewX(360deg);
+  }
+}

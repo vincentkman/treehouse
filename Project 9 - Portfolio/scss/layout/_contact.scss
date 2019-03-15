@@ -1,0 +1,54 @@
+.contact  {
+  @include e(landing) {
+    @include dim($w: 100%, $h: 60vh);
+    @extend %landing;
+  }
+  @include e(wrap) {
+    @extend %wrap;
+  }
+  @include e(inner) {
+    @include pos($pos: fixed, $top: 20%, $left: 0);
+    background-image: url('../images/background-hk2.JPG');
+    @extend %inner;
+  }
+  @include e(caption) {
+    @extend %caption;
+    position: absolute;
+    margin-top: em(-430px);
+    @include  e(link) {
+      color: white;
+    }
+    p {
+      font-size: em(20px);
+      color: white;
+    }
+  }
+  @include e(social) {
+    @include e(icon) {
+      margin-left: em(-10px);
+      @include mq("medium") {
+        margin-left: em(-30px);
+      }
+      a {
+        font-size: em(60px);
+        display: inline-block;
+        padding: em(2px);
+        @include mq("medium") {
+          padding: em(8px);
+        }
+      }
+      @include m(hover) {
+        &:hover {
+          color: $light-grey;
+          @extend %mouseover;
+        }
+      }
+      @include m(img) {
+        color: $green;
+      }
+    }
+  }
+  @include e(copyright) {
+    @extend %glow-text;
+  }
+}

@@ -1,0 +1,81 @@
+.portfolio {
+  width: 100%;
+  @include mq('medium') {
+    @include flexbox($wrap: wrap, $just: center, $align: center);
+  }
+  @include e(btn) {
+    @include pos($pos: absolute, $top: 80%, $left: 30%);
+  }
+  @include e(card-body) {
+    margin: em(20px);
+    @include e(zoomImage) {
+      overflow: hidden;
+      text-align: center;
+      &:hover img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  @include e(card-title) {
+    @include pos($pos: absolute, $top: -8%, $left: 15%);
+    font-weight: $font-weight--ultra-bold;
+    color: $green;
+    @include mq("medium") {
+          @include pos($pos: absolute, $top: -5%, $left: 15%);
+    }
+  }
+
+ //  #box {
+ //  @include pos($pos: absolute, $top: -6%);
+ //   width: 70%;
+ //   height: 15%;
+ //   background: $light-green;
+ //   @include mq("medium") {
+ //     width: 50%;
+ //   }
+ // }
+
+  @include e(project-img) {
+    @include dim($w: 0, $h: em(350px), $max-w: 100%, $max-h: 100%);
+    transition: $trns-duration;
+    opacity: .5;
+    filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0);
+          opacity: .9;
+    }
+  }
+
+  @include e(modal) {
+    @include dim($w: 80%, $max-h: calc(120vh - 225px));
+    @include pos($pos: fixed, $top: 50%, $left: 50%);
+    @include roundy($br: em(10px), $bcolor: white);
+    border: 1px solid $light-grey;
+    z-index: 1;
+    display: none;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    padding: em(50px) em(60px);
+    overflow-y: auto;
+    img {
+      width: em(240px);
+      @include mq("medium") {
+        width: em(400px);
+      }
+    }
+    @include e(close-btn) {
+      @include pos($pos: absolute, $top:em(10px), $right:em(10px));
+      @include roundy($dim: em(40px), $br: $br--default, $bcolor: $light-grey);
+      @extend %mouseover;
+    }
+  }
+
+  @include e(overlay) {
+    @include pos($pos: fixed, $top:0, $left: 0);
+    @include dim($w: 100%, $h: 100%);
+    display: none;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    background-color: rgba(0,0,0,0.5);
+  }
+}

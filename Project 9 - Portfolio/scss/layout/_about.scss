@@ -1,0 +1,16 @@
+.about {
+  margin-top: em(50px);
+  @include e(profile-img) {
+    margin-top: em(50px);
+    filter: grayscale(100%);
+    @include roundy($dim: 90%, $br: em(10px));
+    @include  mq("medium") {
+    @include dim($w: em(500px), $h: em(300px));
+    }
+    &:hover {
+        filter: grayscale(0);
+        transition: 1.5s;
+        opacity: .8;
+    }
+  }
+}
