@@ -1,6 +1,6 @@
 .contact  {
   @include e(landing) {
-    @include dim($w: 100%, $h: 60vh);
+    @include dim($w: 100%, $h: 65vh);
     @extend %landing;
   }
   @include e(wrap) {
